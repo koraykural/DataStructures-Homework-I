@@ -24,6 +24,7 @@ struct stock{
 } shoe_stock;
 
  
+
 void stock::add_stock(int size) {
 
   // List is empty
@@ -81,6 +82,8 @@ void stock::add_stock(int size) {
   }
 }
 
+
+
 void stock::sell(int size) {
 
   // List is empty
@@ -125,6 +128,8 @@ void stock::sell(int size) {
   }
 }
 
+
+
 void stock::current_stock() {
   node *traverse = shoe_stock.head;
   while(traverse) {
@@ -132,6 +137,8 @@ void stock::current_stock() {
     traverse = traverse->next;
   }
 }
+
+
 
 void stock::clear() {
   node *traverse = shoe_stock.head;
@@ -165,7 +172,6 @@ int main(int argc, char *argv[]) {
 
   // Read instruction and perform operation for each, one by one
   int instruction;
-
   while (1) {
 		fscanf(stock_records, "%d", &instruction); 
 
@@ -180,5 +186,7 @@ int main(int argc, char *argv[]) {
 	}
 
   shoe_stock.clear();
+  fclose(stock_records);
+
   return EXIT_SUCCESS;
 }
