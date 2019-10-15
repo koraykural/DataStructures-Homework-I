@@ -3,3 +3,4 @@ output.txt
 *.txt
 *.zip
 *.exe
+.gitattributes
