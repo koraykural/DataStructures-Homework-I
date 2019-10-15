@@ -23,7 +23,8 @@ struct Stock{
   void clear();
 } shoe_stock;
 
- 
+
+
 
 void Stock::add_stock(int size) {
 
