@@ -15,7 +15,7 @@ struct node{
   node *next;
 };
 
-struct stock{
+struct Stock{
   node *head;
   void add_stock(int);
   void sell(int);
@@ -25,7 +25,7 @@ struct stock{
 
  
 
-void stock::add_stock(int size) {
+void Stock::add_stock(int size) {
 
   // List is empty
   if(shoe_stock.head == NULL) {
@@ -65,7 +65,7 @@ void stock::add_stock(int size) {
     return;
   }
 
-  // A node exists with exact size
+  // A node exists with that exact size
   else if (traverse->size == size) {
     traverse->quant += 1;
     return;
@@ -84,7 +84,7 @@ void stock::add_stock(int size) {
 
 
 
-void stock::sell(int size) {
+void Stock::sell(int size) {
 
   // List is empty
   if(shoe_stock.head == NULL) {
@@ -130,7 +130,7 @@ void stock::sell(int size) {
 
 
 
-void stock::current_stock() {
+void Stock::current_stock() {
   node *traverse = shoe_stock.head;
   while(traverse) {
     cout << traverse->size << ':' << traverse->quant << endl;
@@ -140,7 +140,7 @@ void stock::current_stock() {
 
 
 
-void stock::clear() {
+void Stock::clear() {
   node *traverse = shoe_stock.head;
   while(traverse) {
     traverse = shoe_stock.head->next;
@@ -167,6 +167,7 @@ int main(int argc, char *argv[]) {
     cerr << "File could not be opened" << endl;
     exit(1);
 	}
+
 
   shoe_stock.head = NULL;
 
